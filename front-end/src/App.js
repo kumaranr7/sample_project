@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Divider, Typography } from "antd";
+import { Row, Col, Divider, Typography, Space } from "antd";
 import axios from "axios";
 import MyCard from "./Components/MyCard";
 import { Routes, Route, Link } from "react-router-dom";
@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
       <Row gutter={16}>
         <Col className="gutter-row">
           <Title>Blog Posting App</Title>
@@ -62,7 +62,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </Row>
-    </div>
+    </Space>
   );
 }
 
