@@ -8,7 +8,7 @@ export default function Home(props) {
   const handleClick = () => {
     console.log("SOmething Happened");
     props.logout();
-    navigate("/login");
+    navigate("/");
   };
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Home(props) {
         console.log("Authentication successfull")
     }
     else{
-        navigate("/login")
+        navigate("/")
     }
   }, []);
 
